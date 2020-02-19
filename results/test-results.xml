@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="36.974" tests="6" failures="0">
+  <testsuite name="Root Suite" timestamp="2020-02-19T13:39:05" tests="0" file="cypress/integration/Login_Page_Check.js" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Login_Page_Check" timestamp="2020-02-19T13:39:05" tests="6" failures="0" time="36.974">
+    <testcase name="Login_Page_Check Visit_Url" time="31.29" classname="Visit_Url">
+    </testcase>
+    <testcase name="Login_Page_Check Login_Button" time="4.86" classname="Login_Button">
+    </testcase>
+    <testcase name="Login_Page_Check Check_Route" time="0.409" classname="Check_Route">
+    </testcase>
+    <testcase name="Login_Page_Check Login_Header" time="0.266" classname="Login_Header">
+    </testcase>
+    <testcase name="Login_Page_Check CheckInputBox" time="0.066" classname="CheckInputBox">
+    </testcase>
+    <testcase name="Login_Page_Check Check_Continue_Button" time="0.083" classname="Check_Continue_Button">
+    </testcase>
+  </testsuite>
+</testsuites>

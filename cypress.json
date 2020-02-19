@@ -1,4 +1,8 @@
 {
-    "baseUrl": "https://www.lidolearning.com/"
+    "baseUrl": "https://www.lidolearning.com/",
+    "reporter": "junit",
+    "reporterOptions": {
+    "mochaFile": "results/test-results.xml"
+  }
 }
   
