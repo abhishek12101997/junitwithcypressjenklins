@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main":"index.js",
-  "scripts": {
-    "test": "node_modules\\.bin\\cypress run"
+  "scripts":
+  {
+    "test": "node_modules/.bin/cypress run"
   },
     "author": "",
     "license": "ISC",
