@@ -1,27 +1,3 @@
-describe('Login',function()
-{
-    //using css selector are harmfull to use.
-    //getting to the intial page and clearing off the local storage 
-    it('Lido_Learning_Initial_Page_Loading',function()
-    {   
-        cy.clearLocalStorage()
-        //only to check the correct route 
-        //not check loading as it is automatically done by cypress 
-        cy.visit('/')
-        cy.url().should('include','lidolearning.com')
-        //do verify completely that it is the page that you care looking for 
-        //generate 100 satisfaction on that.
-    })
-    it('Login_Button',function()
-    {
-        //going to the login page
-        cy.get('.navbar-toggler').click()
-        cy.get('div.container-fluid.nopadding:nth-child(1) nav.navbar.navbar-expand-xl.bg-white.navbar-light.fixed-top.px-xl-5.shadow-sm.paddingnav:nth-child(1) div.collapse.navbar-collapse.justify-content-between div.navbar-nav:nth-child(2) a.nav-link.btn-navlink:nth-child(2) > button.btn.btn-nav2')
-            .should('be.visible').should('not.be.disabled').click()
-    })
-})
-
-
 // do cookies.getCookies() and then when it returns an array and -> extract or find the name or key 'user-token' 
 describe('Login_Page_Check',function()
     {
@@ -29,13 +5,6 @@ describe('Login_Page_Check',function()
             cy.visit('/')
         })
 
-        it('Login_Button',function(){
-        //going to the login page
-        cy.get('.navbar-toggler').click()
-        cy.get('div.container-fluid.nopadding:nth-child(1) nav.navbar.navbar-expand-xl.bg-white.navbar-light.fixed-top.px-xl-5.shadow-sm.paddingnav:nth-child(1) div.collapse.navbar-collapse.justify-content-between div.navbar-nav:nth-child(2) a.nav-link.btn-navlink:nth-child(2) > button.btn.btn-nav2')
-            .should('be.visible').should('not.be.disabled').click()
-        })
-        
         it('Check_Route',()=>{
             cy.url().should('include','login/mobile')
         })
@@ -59,10 +28,8 @@ describe('Login_Page_Check',function()
     {
         beforeEach(()=>{
             cy.visit('/')
-            cy.get('.navbar-toggler').click()
-            cy.get('div.container-fluid.nopadding:nth-child(1) nav.navbar.navbar-expand-xl.bg-white.navbar-light.fixed-top.px-xl-5.shadow-sm.paddingnav:nth-child(1) div.collapse.navbar-collapse.justify-content-between div.navbar-nav:nth-child(2) a.nav-link.btn-navlink:nth-child(2) > button.btn.btn-nav2')
-                .should('be.visible').should('not.be.disabled').click()
         })
+
         it('Requires_Mobile_Number',function(){
             cy.get('#mobile').should('be.visible').should('not.be.disabled').should('be.empty')
             cy.get('.bottom > .btn').should('be.disabled')
@@ -93,12 +60,10 @@ describe('Login_Page_Check',function()
 
 
 // do cookies.getCookies() and then when it returns an array and -> extract or find the name or key 'user-token' 
-describe('Login_Page_Check',function()
+describe('Otp_Page_Check',function()
 {
     it('Visit_Url',function(){
         cy.visit('/')
-        cy.get('.navbar-toggler').click()
-        cy.get('div.container-fluid.nopadding:nth-child(1) nav.navbar.navbar-expand-xl.bg-white.navbar-light.fixed-top.px-xl-5.shadow-sm.paddingnav:nth-child(1) div.collapse.navbar-collapse.justify-content-between div.navbar-nav:nth-child(2) a.nav-link.btn-navlink:nth-child(2) > button.btn.btn-nav2').click()
         cy.get('#mobile').type(2888888888)
         cy.get('.bottom > .btn').should('be.visible').should('not.be.disabled').click()
         cy.url().should('include','/login/otp')
@@ -125,13 +90,11 @@ describe('Login_Page_Check',function()
     })
 })
 
-describe('Login_Tests',function()
+describe('Otp_Tests',function()
 {
     beforeEach(()=>{
         //try to do this in optimized way
         cy.visit('/')
-        cy.get('.navbar-toggler').click()
-        cy.get('div.container-fluid.nopadding:nth-child(1) nav.navbar.navbar-expand-xl.bg-white.navbar-light.fixed-top.px-xl-5.shadow-sm.paddingnav:nth-child(1) div.collapse.navbar-collapse.justify-content-between div.navbar-nav:nth-child(2) a.nav-link.btn-navlink:nth-child(2) > button.btn.btn-nav2').click()
         cy.get('#mobile').type(2888888888)
         cy.get('.bottom > .btn').should('be.visible').should('not.be.disabled').click()
         cy.url().should('include','/login/otp')
