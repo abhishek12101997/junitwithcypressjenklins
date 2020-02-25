@@ -85,9 +85,6 @@ describe('Otp_Page_Check',function()
         cy.contains('Continue').should('be.disabled')
     })
 
-    it('Check_Resend_OTP_Button',()=>{
-       cy.get(':nth-child(4) > .btn').sholud('have.text','Resend OTP')
-    })
 })
 
 describe('Otp_Tests',function()
